@@ -18,24 +18,31 @@ public class BookService {
         book1.setId(UUID.randomUUID().toString());
         book1.setTitle("Hadis");
         book1.setPublisherYear(LocalDate.now());
+        book1.setAuthor("Ustoz");
         bookList.add(book1);
 
         Book book2 = new Book();
         book2.setId(UUID.randomUUID().toString());
         book2.setTitle("Java Point");
         book2.setPublisherYear(LocalDate.now());
+        book2.setAuthor("JDK");
+
         bookList.add(book2);
 
         Book book3 = new Book();
         book3.setId(UUID.randomUUID().toString());
         book3.setTitle("Task");
         book3.setPublisherYear(LocalDate.now());
+        book3.setAuthor("Bobur_us");
+
         bookList.add(book3);
 
         Book book4 = new Book();
         book4.setId(UUID.randomUUID().toString());
         book4.setTitle("Spring");
         book4.setPublisherYear(LocalDate.now());
+        book4.setAuthor("UstozAs");
+
         bookList.add(book4);
     }
 
@@ -43,7 +50,9 @@ public class BookService {
         if (book.getTitle() == null || book.getTitle().trim().length() < 3) {
             throw new AppBadException("invalid parameter");
         }
-        return true;
+        book.setId(UUID.randomUUID().toString());
+        book.setPublisherYear(LocalDate.now());
+        return bookList.add(book);
     }
 
     public List<Book> allList() {
