@@ -1,0 +1,29 @@
+### Create student
+POST localhost:8080/student
+Content-Type: application/json
+
+{
+  "name": "Murodbek",
+  "phone": "+998 99 795 55 51",
+  "surname": "Azimov"
+}
+
+### getStudentList
+GET localhost:8080/student
+
+### deleteById
+DELETE localhost:8080/student/sid
+
+### updateByID
+PUT localhost:8080/student/fe4a050e-08f1-42ea-9f97-9e1b7526510f
+Content-Type: application/json
+
+{
+  "name": "Murodbek",
+  "surname": "Azimov",
+  "phone": "+998 99 795 55 51"
+}
+
+
+### Serach
+GET  localhost:8080/student/search/?name=ali&surname=ov

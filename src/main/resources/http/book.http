@@ -1,0 +1,29 @@
+### Create student
+POST localhost:8080/book
+Content-Type: application/json
+
+{
+  "name": "kitob",
+  "author": "Murod"
+}
+
+### getStudentList
+GET localhost:8080/book
+
+### getById
+GET localhost:8080/book/
+
+### deleteById
+DELETE localhost:8080/book/<>
+
+### updateByID
+PUT localhost:8080/book/<>
+Content-Type: application/json
+
+{
+  "name": "Java",
+  "author": "JDK"
+}
+
+### search
+GET localhost:8080/book/search?name=jav
